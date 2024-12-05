@@ -1,0 +1,29 @@
+{
+    "mean_var":
+        {
+            "strategy": "mean_var",
+            "aversion": 5,
+            "fee_rate": 0.0,
+            "bounds": [0, null]
+        },
+    "max_return" :         {
+            "strategy": "max_return",
+            "max_vol": 1.2,
+            "fee_rate": 0.0,
+            "bounds": [0, null]
+        },
+    "tracking_error" :         {
+            "strategy": "tracking_error",
+            "tol": 1,
+            "ref_portfolio": "Eq_weighted",
+            "fee_rate": 0.0,
+            "bounds": [0, null]
+        },
+    "vol_targeting" :        {
+          "strategy": "vol_targeting",
+          "target_vol": 0.5,
+          "ref_portfolio": "^GSPC",
+          "fee_rate": 0.0,
+          "bounds": [-1, 1]
+      }
+}

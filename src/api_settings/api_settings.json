@@ -1,0 +1,9 @@
+{
+    "symbols": ["AAPL", "GOOGL", "MSFT"],
+    "api_key": "AKZG5XPBXYX40X1LH4NU",
+    "api_secret": "ABAdoZ0snOXhMZ0ddXw06phH0chQH8XqXZTN4QT4",
+    "base_url": "https://api.alpaca.markets",
+    "api_version": "v2",
+    "scale": 100,
+    "cash": {"USD":  0.0}
+}

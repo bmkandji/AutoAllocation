@@ -1,0 +1,85 @@
+{
+    "symbols": ["AAPL", "AMZN", "GOOGL", "MSFT"],
+
+    "market": "XNYS",
+    "horizon": 30,
+
+    "data": {
+                "start_date": null,
+                "end_date": null,
+                "scale": 100,
+                "cash": {"USD":  0.0},
+                "hist_dataLen": 5000
+    },
+
+
+    "model": {
+                "model_config": {
+                    "model_path": "/src/model_settings/dcc_model_coef.rds",
+                    "model": "sGARCH",
+                    "armaOrder": [5, 1],
+                    "distribution_garch": "norm",
+                    "dccOrder": [2, 1],
+                    "distribution_dcc": "mvt",
+                    "weights": "uniform",
+                    "recalib" : 5
+                }
+            },
+
+    "portfolio": {
+                    "fixed_weights" : {
+                    "index_And_weights": [[1, 1, 0, 0,0],[0, 0.1, 0, 0,0]],
+                    "minmax_cash": [100, 2000],
+                    "target_cash_weights":  0},
+            "ref_portfolios": {
+                "AAPL": {
+                    "capital": null,
+                    "next_weights": [0.0, 1.0, 0.0, 0.0, 0.0],
+                    "weights": null
+                },
+                "AMZN": {
+                    "capital": null,
+                    "next_weights": [0.0, 0.0, 1.0, 0.0, 0.0],
+                    "weights": null
+                },
+                "GOOGL": {
+                    "capital": null,
+                    "next_weights": [0.0, 0.0, 0.0, 1.0, 0.0],
+                    "weights": null
+                },
+                "MSFT": {
+                    "capital": null,
+                    "next_weights": [0.0, 0.0, 0.0, 0.0, 1.0],
+                    "weights": null
+
+                },
+                "Eq_weighted": {
+                    "capital": null,
+                    "next_weights": [0.0, 0.25, 0.25, 0.25, 0.25],
+                    "weights": null
+
+                                }
+
+                                }
+                },
+
+    "strategy":
+                {
+                    "strategy": "mean_var",
+                    "aversion": 5,
+                    "fee_rate": 0.0,
+                    "bounds": [0, null]
+                },
+
+    "api": {
+                "api_key": "PKQSWCLHCTZW8MZ48B27",
+                "api_secret": "RrO10JpjMnDmaDLzPpasLTgIk4dJqqHaC8fGZmOE",
+                "base_url": "https://paper-api.alpaca.markets",
+                "api_version": "v2",
+                "cash": "USD"
+                    },
+
+    "rportfolio" : {
+                    },
+  "pm_manger": "C:/Users/MatarKANDJI/automAM/src/pfManger_settings/pfManager.pickle"
+}
